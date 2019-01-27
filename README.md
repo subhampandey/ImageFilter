@@ -18,3 +18,6 @@ THE FOLLOWING FILTER ARE IMPLEMENTED.............
 10.IMG_FILTER_MEAN_REMOVAL: Uses mean removal to achieve a "sketchy" effect.
 11.IMG_FILTER_SMOOTH: Makes the image smoother. Use arg1 to set the level of smoothness.
 12.IMG_FILTER_PIXELATE: Applies pixelation effect to the image, use arg1 to set the block size and arg2 to set the pixelation effect mode.
+.........................................................................
+ Firstly, here the  changing task is selecting image file from local machine ..
+ here used a file type button for choose a file and a load button to load the img file in canvas.
