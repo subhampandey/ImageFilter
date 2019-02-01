@@ -13,10 +13,24 @@
   <option value="Native">Native</option>
   <option value="Blur">Blur</option>
 </select>
+<select onchange="ConvolutionF();" id="convo">
+  <option value="Normal" >Normal</option>
+  <option value="Sharpen" >Sharpen</option>
+  <option value="Emboss" >Emboss</option>
+  <option value="EdgeDetection">EdgeDetection</option>
+  <option value="Blur">Blur</option>
+</select>
+<select onchange="colorSwapF();" id="colorSwap">
+  <option value="Normal" >Normal</option>
+  <option value="red" >RED</option>
+  <option value="green" >GREEN</option>
+  <option value="blue" >BLUE</option>
+</select>
 <canvas id="canvas"  ></canvas>
 <script type="text/javascript" src="/jsFilter/canvasScript.js">
-<script type="text/javascript" src="/jsFilter/IMG_FILTER_NEGATE.js">
-
 </script>
+<script type="text/javascript" src="/jsFilter/EmphasizeColorFilter.js"></script>
+<script type="text/javascript" src="/jsFilter/color.js"></script>
+<script type="text/javascript" src="/jsFilter/colorSwap.js"></script>
 </body>
 </html>
