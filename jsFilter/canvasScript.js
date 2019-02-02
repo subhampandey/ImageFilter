@@ -20,6 +20,17 @@ function ConvolutionF(){
 imgData.data=data;
 putImgInCanvas(imgData);
   }
+  else if (x=="Emboss") {
+    var imgData = getImgFrmCanvas();
+
+     var kernal  = [[2,0,0],[0,-1,0],[0,0,-1]];//array(2, 0, 0), array(0, -1, 0), array(0, 0, -1)
+
+    var filter = new convolutionFilter(imgData,kernal);
+    filter.print();
+  imgData.data = filter.transformImage(127);
+ filter.print();
+ putImgInCanvas(imgData);
+   }
   else{
       alert("working: "+x);
   }
@@ -86,27 +97,8 @@ function MyFunction(){
   else if (x=="Blur") {
     var imgData = getImgFrmCanvas();
  var kernal  = [[0,0.2,0],[0.2,0.2,0.2],[0,0.2,0]];
-    for(var x = 0; x < imgData.width; x++){
-      for(var y = 0; y < imgData.height; y++){
-        var red =0 ;
-        var green =0;
-        var blue =0;
-var index = (x+y*imgData.width)*4;
-        for(var i=-1;i<=1;i++){
-          for(var j=-1;j<=1;j++){
-            var index1 = ((x+i) + (y+j) * imgData.width)*4;
-          red +=  imgData.data[index1]*kernal[i+1][j+1] ;
-          green +=  imgData.data[index1+1]*kernal[i+1][j+1];
-          blue +=  imgData.data[index1+2]*kernal[i+1][j+1];
-          }
-        }
-
-        imgData.data[index] =red;
-        imgData.data[index+1] = green;
-        imgData.data[index+2] = blue;
-
-      }
-    }
+var filter = new convolutionFilter(imgData,kernal);
+imgData.data = filter.transformImage(0);
 putImgInCanvas(imgData);
   }
   else {
