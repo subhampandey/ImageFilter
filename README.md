@@ -10,5 +10,5 @@ THE FOLLOWING FILTER ARE IMPLEMENTED.............
 2. EmphasizeColor --> take target color . if a pixels color less than target color grayscale it.
 3. ColorSwap --> take a pixel .. grascale any two value ( like red or green) and leave the other on as it is. 
 .........................................................................
- Firstly, here the  changing task is selecting image file from local machine ..
- here used a file type button for choose a file and a load button to load the img file in canvas.
+ Firstly, here the  challenging task is selecting image file from local machine ..
+ take a file type button to choose a file and a load button to load the img file in canvas.
